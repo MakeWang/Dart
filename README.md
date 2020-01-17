@@ -1,10 +1,11 @@
 # Dart
 
-## 数据定义类型</br>
+## 基础</br>
 * [强类型](#强类型)
 * [弱类型](#弱类型)
 * [字符串打印](#字符串打印)
 * [常量](#常量)
+* [集合](#集合)
 
 
 
@@ -88,5 +89,37 @@ identical(c1,c2) //true
 const PI = 3.1415926;
 ```
 
+### 常量
+```java
+//1、Map
+//Map定义
+var map = <String,dynamic>{
+  'name':"张三",
+  "age":12
+};
+print("打印：$map")；//打印：{name: 张三, age: 12}
 
+//Map转换成Json
+var jsonStr = jsonEncode(map); //jsonEncode方法需要导包：import 'dart:convert';
+print("打印：$jsonStr"); //打印：{"name":"张三","age":12}
+
+//遍历方式
+//第一种方式：forEach遍历
+map.forEach((k,v){
+  print("key：$k    value：$v");
+});
+//遍历所有Key
+map.keys.forEach((k){
+ print("key：$k");
+});
+//遍历所有value
+map.values.forEach((v){
+ print("value：$v");
+});
+
+//第二种方式：forEach遍历
+
+
+
+```
 
