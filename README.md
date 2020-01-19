@@ -24,8 +24,19 @@ print("$a2 is test");
 var、dynamic、Object，初始默认类型都是null
 区别:
 * var：类型一但确定，就无法修改类型，不然回报错
-* dynamic:类型确定，也可以修改
-* Object:和dynamic差不多
+* dynamic:类型确定，也可以修改；动态任意类型，编译阶段不检查类型
+* Object:动态任意类型，编译阶段检查检查类型
+
+```dart
+//dynamic
+dynamic test = "abc";
+test.abc(); //调用不存在的方法，编译通过，运行报异常
+
+//Object
+Object obj = "abc";
+obj.aa();  //报错
+```
+
 
 
 ### 字符串打印
