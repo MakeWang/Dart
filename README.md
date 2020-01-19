@@ -11,7 +11,7 @@
 
 ### 强类型
 int、double、num、String、bool,初始默认类型都是null
-```java
+```dart
 int a1 = 12;
 double a2 = 12.5;
 nul a3 = 13;
@@ -29,7 +29,7 @@ var、dynamic、Object，初始默认类型都是null
 
 
 ### 字符串打印
-```java
+```dart
 //$s 字符串占位符
 int a1 = 1;
 int a2 = 2;
@@ -62,7 +62,7 @@ s2 == s3; //true
 ```
 
 ### 常量
-```java
+```dart
 //final关键字：一旦赋值，则不可修改；特性：不可变性可传递 
 final String str = "aa";
 str = "bb"; //报错
