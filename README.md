@@ -143,7 +143,7 @@ map1.addAll(map2); //报错
 ```
 
 ```dart
-//1、List
+//2、List
 //定义
 //(1)
 List<dynamic> list = new List();
@@ -170,11 +170,23 @@ var list = [1,"sa"];
 //添加
 list.add(2); //单个添加
 list..add(3)..add("sa"); //链式添加
+list.insert(0, "a"); //在什么索引位置添加元素
 //删除
 list.remove(2); //删除元素
 list.removeAt(0); //删除元素索引
-
-
+//检索
+int value = list.indexOf(1); //查询第一个元素的索引，-1不存在
+bool result = list.contains(2); //集合是否包含元素
 
 ```
 
+```dart
+//3、Set
+Set<int> set = new Set();
+set.add(1);
+set.add(1);
+set.add(2);
+set.forEach((v){
+  print(v);// 会去除重复元素
+});
+```
