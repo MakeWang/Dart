@@ -90,7 +90,7 @@ const PI = 3.1415926;
 ```
 
 ### 集合
-```java
+```dart
 //1、Map
 //Map定义
 var map = <String,dynamic>{
