@@ -89,7 +89,7 @@ identical(c1,c2) //true
 const PI = 3.1415926;
 ```
 
-### 常量
+### 集合
 ```java
 //1、Map
 //Map定义
@@ -104,7 +104,7 @@ var jsonStr = jsonEncode(map); //jsonEncode方法需要导包：import 'dart:con
 print("打印：$jsonStr"); //打印：{"name":"张三","age":12}
 
 //遍历方式
-//第一种方式：forEach遍历
+//forEach遍历
 map.forEach((k,v){
   print("key：$k    value：$v");
 });
@@ -117,7 +117,21 @@ map.values.forEach((v){
  print("value：$v");
 });
 
-//第二种方式：forEach遍历
+//赋值
+//根据Key来赋值
+map["age"] = 56; //Key如果存在，则直接修改value的值，否则就创建一个新的key并且赋值。
+//添加新元素，给不存在的key赋值，存在者不会赋值
+Map<String, int> map1 = {'Bob': 36};
+//1、方式一
+map1.putIfAbsent("sex1", (){
+    55;
+});
+//打印结果：sex1：null
+//2、方式二
+map1.putIfAbsent("sex2", ()=>66);
+map1.putIfAbsent("sex2", ()=>77);
+//打印结果：sex2:66    存在则不会赋值
+
 
 
 
