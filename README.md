@@ -34,7 +34,7 @@ test.abc(); //调用不存在的方法，编译通过，运行报异常
 
 //Object
 Object obj = "abc";
-obj.aa();  //报错
+obj.abc();  //报错
 ```
 
 
