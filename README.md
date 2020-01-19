@@ -118,22 +118,27 @@ map.values.forEach((v){
 });
 
 //赋值
-//根据Key来赋值
+//1、根据Key来赋值
 map["age"] = 56; //Key如果存在，则直接修改value的值，否则就创建一个新的key并且赋值。
-//添加新元素，给不存在的key赋值，存在者不会赋值
+//2、添加新元素，给不存在的key赋值，存在者不会赋值
 Map<String, int> map1 = {'Bob': 36};
-//1、方式一
+//方式一
 map1.putIfAbsent("sex1", (){
     55;
 });
 //打印结果：sex1：null
-//2、方式二
+//方式二
 map1.putIfAbsent("sex2", ()=>66);
 map1.putIfAbsent("sex2", ()=>77);
 //打印结果：sex2:66    存在则不会赋值
-
-
-
-
+//3、addAll赋值
+//两个Map的value类型不同，可以赋值；
+Map<String, dynamic> map1 = {"name": "张三"};
+Map<String, int> map2 = {"age": 36};
+map1.addAll(map2); //可以赋值
+//Map中k和v如果类型已经确定，则无法赋值
+Map<String, String> map1 = {"name": "张三"};
+Map<String, int> map2 = {"age": 36};
+map1.addAll(map2); //报错
 ```
 
