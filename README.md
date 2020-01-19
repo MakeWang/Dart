@@ -142,3 +142,39 @@ Map<String, int> map2 = {"age": 36};
 map1.addAll(map2); //报错
 ```
 
+```dart
+//1、List
+//定义
+//(1)
+List<dynamic> list = new List();
+list.add(1);
+list.add("sa");
+//(2)
+List<dynamic> list2 = [1,"sa"];
+//(3)
+var list = [1,"sa"];
+
+//遍历
+var list = [1,"sa"];
+//forEach
+list.forEach((v){
+  print(v);
+});
+//for
+for(var v in list){
+  print(v);
+}
+
+//元素操作
+var list = [1,"sa"];
+//添加
+list.add(2); //单个添加
+list..add(3)..add("sa"); //链式添加
+//删除
+list.remove(2); //删除元素
+list.removeAt(0); //删除元素索引
+
+
+
+```
+
